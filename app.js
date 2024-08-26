@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const pool = require('./db');
+const router = require('./routes');
 
 class App{
   constructor(){
@@ -16,15 +17,7 @@ class App{
   }
 
   routes(){
-
-    // Criar uma tarefa
-
-    // Ler todas as tarefas
-
-    // Atualizar uma tarefa
-
-    // Deletar uma tarefa
-    
+    this.app.use(router);
   }
 }
 
